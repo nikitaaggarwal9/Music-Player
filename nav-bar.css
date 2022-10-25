@@ -1,0 +1,285 @@
+/* this file is specific to the style of navigation bar 
+and is common to both home screen (home.html) and single playlist screen (playlist.html) */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(61, 61, 60);
+    --poster-color: rgba(248, 154, 60, 0.84);
+    --song-color: rgba(213, 154, 95, 0.851);
+}
+
+::placeholder {
+    color: whitesmoke;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: var(--main-color) !important;
+}
+
+.nav-area {
+    height: 13%;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+}
+
+.nav-left {
+    height: 100%;
+    width: 30%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 95%;
+    width: auto;
+    /* border: 1px solid red; */
+}
+
+.logo-img {
+    height: 100%;
+    color: rgba(248, 154, 60, 0.84)
+}
+
+.logo-name h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    font-family: cursive;
+}
+
+.strokeme {
+    text-shadow: -2px -2px 0 var(--poster-color), 2px -2px 0 var(--poster-color), -2px 2px 0 var(--poster-color), 2px 2px 0 var(--poster-color);
+}
+
+.favt span {
+    margin-left: 40%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.center {
+    height: 100%;
+    width: 35%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-area {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(16, 14, 14);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.fa-search {
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+#search {
+    background-color: rgb(16, 14, 14);
+    border: none;
+    width: 80%;
+    outline: none;
+    color: white;
+}
+
+.fa-microphone {
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+.nav-right {
+    height: 100%;
+    width: 20%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.bell {
+    /* border: 1px solid red; */
+    margin-left: 40%;
+    margin-right: 4%;
+}
+
+.fa-bell {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.profile {
+    height: 2.8rem;
+    width: 2.8rem;
+    /* border: 1px solid pink; */
+    border-radius: 50%;
+    background-image: url(./assets/sea.jpg);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-left {
+        width: 25%;
+    }
+
+    .logo-name h1 {
+        font-size: 2.5rem;
+    }
+
+    .favt span {
+        font-size: 1.1rem;
+    }
+
+    .center {
+        width: 45%;
+    }
+
+    .nav-right {
+        width: 15%;
+    }
+
+    .fa-bell {
+        font-size: 1.1rem;
+        color: whitesmoke;
+    }
+
+    .profile {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-left {
+        width: 25%;
+    }
+
+    .logo {
+        height: 75%;
+    }
+
+    .logo-name h1 {
+        font-size: 2.3rem;
+    }
+
+    .favt span {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .center {
+        width: 50%;
+    }
+
+    .input-area {
+        height: 50%;
+        border-radius: 25px;
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+
+    .nav-right {
+        width: 15%;
+        justify-content: space-around;
+    }
+
+    .bell {
+        margin: 0;
+    }
+
+    .fa-bell {
+        font-size: 1.1rem;
+        color: whitesmoke;
+    }
+
+    .profile {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+}
+
+
+
+@media screen and (max-width: 426px) {
+    .nav-area {
+        height: 11%;
+    }
+
+    .nav-left {
+        width: 20%;
+    }
+
+    .logo {
+        height: 100%;
+        width: 50%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-img {
+        height: 50%;
+    }
+
+    .logo-name h1 {
+        font-size: 1.5rem;
+    }
+
+    .favt {
+        display: none;
+    }
+
+    .center {
+        width: 60%;
+    }
+
+    .input-area {
+        height: 55%;
+        border-radius: 25px;
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+
+    .fa-search,
+    .fa-microphone {
+        font-size: 1rem;
+    }
+
+    .nav-right {
+        width: 20%;
+        justify-content: center;
+    }
+
+    .bell {
+        display: none;
+    }
+
+    .profile {
+        height: 2rem;
+        width: 2rem;
+    }
+}

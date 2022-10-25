@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="./assets/icons8-musical-notes-16 (1).png">
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music-player.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <nav class="nav-area">
+        <div class="nav-left">
+            <div class="logo">
+                <img class="logo-img" src="./assets/headphone.png">
+            </div>
+            <div class="logo-name">
+                <h1 class="strokeme">dj</h1>
+            </div>
+            <div class="favt">
+                <span>Favourites</span>
+            </div>
+        </div>
+        <div class="center">
+            <div class="input-area">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Search" />
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <div class="nav-right">
+
+            <div class="bell">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="profile"></div>
+        </div>
+    </nav>
+
+    <div id="content">
+        <main id="main">
+
+            <!-- Different Random Posters -->
+            <div id="random-poster">
+                <div class="poster-img">
+                    <img src="./assets/pos3.jfif" alt="">
+                </div>
+                <div class="poster-img">
+                    <img src="./assets/pos6.jfif" alt="">
+                </div>
+                <div class="poster-img">
+                    <img src="./assets/pos4.png" alt="">
+                </div>
+            </div>
+
+
+            <!-- Latest Release -->
+            <div id="latest-release">
+                <h2 id="lat-rel-heading">Latest Release</h2>
+                <div id="lat-rel-songs">
+                    <div class="lat-rel-cont">
+                        <div class="lat-rel-img">
+                            <img src="./assets/cp-th.jpg" alt="">
+                        </div>
+                        <div class="lat-rel-info">
+                            <div class="lat-rel-name">That's Hilarious</div>
+                            <div class="lat-rel-dor">Oct 10, 2022</div>
+                        </div>
+                        <div class="menu-dur">
+                            <a href="#menu-option">
+                                <div class="menu">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </a>
+                            <div class="dur">4:04</div>
+                        </div>
+                        <!-- <div class="menu-option-bar" id="menu-option">
+                            <p><a>PlayList</a></p>
+                            <p><a>Next Song</a></p>
+                            <p><a href="#menu" style="text-decoration:none;">
+                                    <i class="fa-solid fa-chevron-up"></i>
+                            </a></p>
+                        </div> -->
+
+                    </div>
+                    <div class="lat-rel-cont">
+                        <div class="lat-rel-img">
+                            <img src="./assets/bye.jfif" alt="">
+                        </div>
+                        <div class="lat-rel-info">
+                            <div class="lat-rel-name">Bye Bye</div>
+                            <div class="lat-rel-dor">Oct 15, 2022</div>
+                        </div>
+                        <div class="menu-dur">
+                            <div class="menu">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="dur">4:39</div>
+                        </div>
+                    </div>
+                    <div class="lat-rel-cont">
+                        <div class="lat-rel-img">
+                            <img src="./assets/celestial.png" alt="">
+                        </div>
+                        <div class="lat-rel-info">
+                            <div class="lat-rel-name">Celestial</div>
+                            <div class="lat-rel-dor">Oct 7, 2022</div>
+                        </div>
+                        <div class="menu-dur">
+                            <div class="menu">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="dur">3:34</div>
+                        </div>
+                    </div>
+                    <div class="lat-rel-cont">
+                        <div class="lat-rel-img">
+                            <img src="./assets/unholy.jpg" alt="">
+                        </div>
+                        <div class="lat-rel-info">
+                            <div class="lat-rel-name">Unholy</div>
+                            <div class="lat-rel-dor">Oct 11, 2022</div>
+                        </div>
+                        <div class="menu-dur">
+                            <div class="menu">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="dur">4:04</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Artists -->
+            <div id="popular-artists">
+                <h2 id="pop-art-heading">Popular Artists</h2>
+                <div id="pop-art-cont">
+
+                    <div class="pop-art">
+                        <a href="./playlist.html"><img class="pop-art-img" src="./assets/localtrain.jpg" alt=""></a>
+                        <h3 class="art-name">Local T</h3>
+                    </div>
+
+                    <div class="pop-art">
+                        <a href="./playlist.html"><img class="pop-art-img" src="./assets/rit.jpg" alt=""></a>
+                        <h3 class="art-name">Ritviz</h3>
+                    </div>
+                    <div class="pop-art">
+                        <a href="./playlist.html"><img class="pop-art-img" src="./assets/anuv.jpg" alt=""></a>
+                        <h3 class="art-name">Anuv J</h3>
+                    </div>
+                    <div class="pop-art">
+                        <a href="./playlist.html"><img class="pop-art-img" src="./assets/download.jfif" alt=""></a>
+                        <h3 class="art-name">Jasleen R</h3>
+                    </div>
+                    <div class="pop-art">
+                        <a href="./playlist.html"><img class="pop-art-img" src="./assets/kk.jpg" alt=""></a>
+                        <h3 class="art-name">K K</h3>
+                    </div>
+                    <div class="pop-art pa-6">
+                        <a href="./playlist.html"><img class="pop-art-img" src="./assets/pk.jpg" alt=""></a>
+                        <h3 class="art-name">Prateek K</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Different Stations -->
+            <div id="stations">
+                <div id="station">
+                    <div id="s1">
+                        <div id="s2">
+                            <div id="s3">
+                                <div id="st-music">
+                                    <i class="fa-solid fa-music"></i>
+                                </div>
+                                <div id="st-heading">Stations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="moods">
+                    <div class="mood m1">Love</div>
+                    <div class="mood m2">Workout</div>
+                    <div class="mood m3">Chill</div>
+                    <div class="mood m4">Retro</div>
+                    <div class="mood m5">Rock</div>
+                    <div class="mood m6">Pop</div>
+                </div>
+            </div>
+
+            <!-- Random Playlists -->
+            <div id="playlists">
+                <div class="playlist p1">
+                    <div class="centered">Road-Trip</div>
+                </div>
+
+                <div class="playlist p2">
+                    <div class="centered">Party-Night</div>
+
+                </div>
+                <div class="playlist p3">
+
+                    <div class="centered">Workout</div>
+                </div>
+            </div>
+
+            <!-- Latest-English -->
+            <div id="lat-eng">
+                <div id="lat-head">Latest English</div>
+                <div id="lat-songs-cont">
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/celestial.png" alt="">
+                        </div>
+                        <div class="lat-song-name">Celestial</div>
+                        <div class="lat-song-dor">Oct 15, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/cp-th.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">That's Hilarious</div>
+                        <div class="lat-song-dor">Oct 12, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/unholy.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Unholy</div>
+                        <div class="lat-song-dor">Oct 7, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/bye.jfif" alt="">
+                        </div>
+                        <div class="lat-song-name">Bye Bye</div>
+                        <div class="lat-song-dor">Oct 3, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/bp.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Born Pink</div>
+                        <div class="lat-song-dor">Sept 29, 2022</div>
+                    </div>
+                    <div class="lat-song ls-6">
+                        <div class="lat-song-img">
+                            <img src="./assets/cd.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Calm Down</div>
+                        <div class="lat-song-dor">Sept 21, 2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Latest-Hindi -->
+            <div id="lat-hin">
+                <div id="lat-head">Latest Hindi</div>
+                <div id="lat-songs-cont">
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/ks.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Kinna Sona</div>
+                        <div class="lat-song-dor">Oct 10, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/tt.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Taali Taali</div>
+                        <div class="lat-song-dor">Oct 6, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/heer.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Haaniya Ve</div>
+                        <div class="lat-song-dor">Oct 1, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/dg.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Doctor G</div>
+                        <div class="lat-song-dor">Sept 30, 2022</div>
+                    </div>
+                    <div class="lat-song">
+                        <div class="lat-song-img">
+                            <img src="./assets/cnt.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">DamaDum Mast</div>
+                        <div class="lat-song-dor">Oct 9, 2022</div>
+                    </div>
+                    <div class="lat-song ls-6">
+                        <div class="lat-song-img">
+                            <img src="./assets/alc.jpg" alt="">
+                        </div>
+                        <div class="lat-song-name">Alcoholia</div>
+                        <div class="lat-song-dor">Sept 25, 2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lat-bot-mar"></div>
+        </main>
+
+        <!-- Side-Queue -->
+        <aside id="aside">
+            <div id="side-queue">
+
+                <div id="queue-header">
+                    <div id="queue-heading">Queue</div>
+                    <a id="queue-option-link" href="#queue-option">
+                        <div id="queue-options">Queue </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <!-- ----------------------------------------------------------- -->
+                    <div id="queue-option-cont" class="queue-option-bar">
+                        <p><a>PlayList</a></p>
+                        <p><a>Next Song</a></p>
+                        <p><a href="#queue-heading" style="text-decoration:none;">
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </a></p>
+                    </div>
+                    <!-- --------------------------------------------------- -->
+                </div>
+
+                <div id="queue-songs-cont">
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">01</div>
+                        <div class="q-song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Mizaaj</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">02</div>
+                        <div class="q-song-img">
+                            <img src="./assets/akp.jfif" alt="">
+                        </div>
+                        <div class="q-song-name">Dil Mere</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">03</div>
+                        <div class="q-song-img">
+                            <img src="./assets/heer.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Haaniya Ve</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">04</div>
+                        <div class="q-song-img">
+                            <img src="./assets/alc.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Alcoholia</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">05</div>
+                        <div class="q-song-img">
+                            <img src="./assets/cnt.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">DamaDum</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">06</div>
+                        <div class="q-song-img">
+                            <img src="./assets/celestial.png" alt="">
+                        </div>
+                        <div class="q-song-name">Celestial</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">07</div>
+                        <div class="q-song-img">
+                            <img src="./assets/unholy.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Unholy</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">08</div>
+                        <div class="q-song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Aaftab</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">09</div>
+                        <div class="q-song-img">
+                            <img src="./assets/cp-th.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">That's Hilarious</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">10</div>
+                        <div class="q-song-img">
+                            <img src="./assets/bp.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Born Pink</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">11</div>
+                        <div class="q-song-img">
+                            <img src="./assets/bye.jfif" alt="">
+                        </div>
+                        <div class="q-song-name">Bye Bye</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">12</div>
+                        <div class="q-song-img">
+                            <img src="./assets/tt.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Taali Taali</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">13</div>
+                        <div class="q-song-img">
+                            <img src="./assets/ks.jpg" alt="">
+                        </div>
+                        <div class="q-song-name">Kinna Sona</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">14</div>
+                        <div class="q-song-img">
+                            <img src="./assets/kasoor.jfif" alt="">
+                        </div>
+                        <div class="q-song-name">Kasoor</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">15</div>
+                        <div class="q-song-img">
+                            <img src="./assets/akp.jfif" alt="">
+                        </div>
+                        <div class="q-song-name">Dil Mere</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">16</div>
+                        <div class="q-song-img">
+                            <img src="./assets/shawn2.png" alt="">
+                        </div>
+                        <div class="q-song-name">Three Words</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">17</div>
+                        <div class="q-song-img">
+                            <img src="./assets/msh1.jfif" alt="">
+                        </div>
+                        <div class="q-song-name">Alone</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="q-song-cont">
+                        <div class="q-serial-no">18</div>
+                        <div class="q-song-img">
+                            <img src="./assets/shawn1.jfif" alt="">
+                        </div>
+                        <div class="q-song-name">Stitches</div>
+                        <div class="sign"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div id="q-song-cont-bot-mar"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Fotter: Music Player -->
+    <footer id="player">
+        <div id="player-song-info">
+            <div id="pl-song-img">
+                <img src="./assets/mk.png" alt="">
+            </div>
+            <div id="pl-song-info">
+                <div id="pl-song-name">Mann Kasturi &nbsp;</div>
+                <div id="pl-song-artist"> - Amit Kilam</div>
+            </div>
+            <div id="pl-song-like">
+                <i class="fa-regular fa-heart pl-like"></i>
+            </div>
+            <div id="pl-song-block">
+                <i class="fa-sharp fa-solid fa-ban"></i>
+            </div>
+        </div>
+
+        <div id="pl-music-controls">
+            <div id="pl-up">
+                <div id="mix" class="control-div">
+                    <i class="fa-solid fa-shuffle control"></i>
+                </div>
+                <div id="replay" class="control-div">
+                    <i class="fa-solid fa-chevron-left control"></i>
+                </div>
+                <div id="pause-play" class="control-div">
+                    <i class="fa-solid fa-play control play2"></i>
+                </div>
+                <div id="next" class="control-div">
+                    <i class="fa-solid fa-chevron-right control"></i>
+                </div>
+                <div id="loop" class="control-div">
+                    <i class="fa-solid fa-repeat control"></i>
+                </div>
+            </div>
+            <div id="pl-down">
+                <div id="time-played">2:14</div>
+                <div id="time-display">
+                    <div id="time-played-dis"></div>
+                </div>
+                <div id="time-left">3:46</div>
+            </div>
+        </div>
+
+        <div id="pl-other-opt">
+            <div id="details" class="opt-div">
+                <i class="fa-solid fa-bars opt-sign"></i>
+            </div>
+            <div id="system" class="opt-div">
+                <i class="fa-solid fa-computer opt-sign"></i>
+            </div>
+            <div id="volume" class="opt-div">
+                <i class="fa-solid fa-volume-high opt-sign"></i>
+            </div>
+            <div class="slidecontainer">
+                <input id="vol-ctr" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <div id="full-screen" class="opt-div">
+                <i class="fa-solid fa-up-right-and-down-left-from-center opt-sign"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

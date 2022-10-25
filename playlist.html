@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="playlist.css">
+    <link rel="stylesheet" href="music-player.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="./assets/icons8-musical-notes-16 (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <nav class="nav-area">
+        <div class="nav-left">
+            <div class="logo">
+                <img class="logo-img" src="./assets/headphone.png">
+            </div>
+            <div class="logo-name">
+                <h1 class="strokeme">dj</h1>
+            </div>
+            <!-- <div class="favt">
+                <span>Favourites</span>
+            </div> -->
+        </div>
+        <div class="center">
+            <div class="input-area">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Search" />
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <div class="nav-right">
+
+            <div class="bell">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="profile"></div>
+        </div>
+    </nav>
+
+    <div id="content">
+        <main id="main">
+            <div id="art-poster">
+                <div id="art-img">
+                    <img src="./assets/localtrain.jpg" alt="">
+                </div>
+                <div id="art-info">
+                    <div id="art-name-heading">
+                        <div id="art-name">The Local Train</div>
+                        <div id="follow"> 
+                            <div id="followers">1.3M Followers</div>
+                            <div id="follow-btn">Follow
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div id="info">The Local Train is an Indian rock band and the band's current lineup consists of lead
+                        guitarist - Paras Thakur,
+                        bassist - Ramit Mehra, and drummer and percussionist - Sahil Sarin.</div>
+
+                    <div id="others">
+                        <button id="play-all">
+                            <i class="fa-solid fa-play play1"></i>
+                        </button>
+
+                        <h6 id="stats-info">150 Songs | 78 Albums</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div id="artist-songs">
+                <div class="song-cont">
+                    <div class="serial-no">01</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Aaftab</div>
+                    <div class="duration">4:04</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">02</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Bandey</div>
+                    <div class="duration">5:24</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">03</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Yeh Zinadagi hai</div>
+                    <div class="duration">4:09</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">04</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Dil Mere</div>
+                    <div class="duration">3:31</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">05</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Aaoge Tum Kabhi</div>
+                    <div class="duration">5:14</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">06</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Choo Loo</div>
+                    <div class="duration">3:34</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">07</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Mizaaj</div>
+                    <div class="duration">4:24</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+                <div class="song-cont">
+                    <div class="serial-no">08</div>
+                    <div class="song-img">
+                        <img src="./assets/aaftab.jpg" alt="">
+                    </div>
+                    <div class="song-name">Manzil</div>
+                    <div class="duration">4:50</div>
+                    <div class="sign heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="sign add"><i class="fa-solid fa-add"></i></div>
+                </div>
+
+
+            </div>
+        </main>
+
+        <aside id="aside">
+            <div id="similar-artists">
+                <div class="header">
+                    <h1 class="heading">Similar Artists</h1>
+                    <div class="view-all">View All</div>
+                </div>
+                <div id="artists">
+                    <div class="artist">
+
+                        <div class="artist-img">
+                            <img src="./assets/anuvj.jpg" alt="">
+                        </div>
+
+                        <div class="artist-info">
+                            <div class="artist-name">Anuv Jain</div>
+                            <div class="artist-type">Pop</div>
+                        </div>
+
+                        <div class="opt">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="artist">
+
+                        <div class="artist-img">
+                            <img src="./assets/prateek-kuhad.jpg" alt="">
+                        </div>
+
+                        <div class="artist-info">
+                            <div class="artist-name">Prateek Kuhad</div>
+                            <div class="artist-type">Pop</div>
+                        </div>
+
+                        <div class="opt">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="artist">
+
+                        <div class="artist-img">
+                            <img src="./assets/jasleenr.webp" alt="">
+                        </div>
+
+                        <div class="artist-info">
+                            <div class="artist-name">Jasleen Royal</div>
+                            <div class="artist-type">Pop</div>
+                        </div>
+
+                        <div class="opt">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="artist">
+
+                        <div class="artist-img">
+                            <img src="./assets/rit.jpg" alt="">
+                        </div>
+
+                        <div class="artist-info">
+                            <div class="artist-name">Ritviz</div>
+                            <div class="artist-type">Pop</div>
+                        </div>
+
+                        <div class="opt">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="artist">
+
+                        <div class="artist-img">
+                            <img src="./assets/kk.jpg" alt="">
+                        </div>
+
+                        <div class="artist-info">
+                            <div class="artist-name">K K</div>
+                            <div class="artist-type">Pop</div>
+                        </div>
+
+                        <div class="opt">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="recently-played">
+
+                <div class="header">
+                    <h1 class="heading">Recently Played</h1>
+                    <div class="view-all">View All</div>
+                </div>
+
+                <div id="recent-song-cont">
+                    <div class="song-cont">
+                        <div class="serial-no">01</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Mizaaj</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="song-cont">
+                        <div class="serial-no">02</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Dil Mere</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="song-cont">
+                        <div class="serial-no">03</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Gul</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="song-cont">
+                        <div class="serial-no">04</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Mishri</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="song-cont">
+                        <div class="serial-no">05</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Nit Nit</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="song-cont">
+                        <div class="serial-no">06</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Udd Gaye</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="song-cont">
+                        <div class="serial-no">07</div>
+                        <div class="song-img">
+                            <img src="./assets/aaftab.jpg" alt="">
+                        </div>
+                        <div class="song-name">Kasoor</div>
+                        <div class="sign heart left-margin"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="player">
+        <div id="player-song-info">
+            <div id="pl-song-img">
+                <img src="./assets/mk.png" alt="">
+            </div>
+            <div id="pl-song-info">
+                <div id="pl-song-name">Mann Kasturi</div>
+                <div id="pl-song-artist">Amit Kilam</div>
+            </div>
+            <div id="pl-song-like">
+                <i class="fa-regular fa-heart pl-like"></i>
+            </div>
+            <div id="pl-song-block">
+                <i class="fa-sharp fa-solid fa-ban"></i>
+            </div>
+        </div>
+
+        <div id="pl-music-controls">
+            <div id="pl-up">
+                <div id="mix" class="control-div">
+                    <i class="fa-solid fa-shuffle control"></i>
+                </div>
+                <div id="replay" class="control-div">
+                    <i class="fa-solid fa-chevron-left control"></i>
+                </div>
+                <div id="pause-play" class="control-div">
+                    <i class="fa-solid fa-play control play2"></i>
+                </div>
+                <div id="next" class="control-div">
+                    <i class="fa-solid fa-chevron-right control"></i>
+                </div>
+                <div id="loop" class="control-div">
+                    <i class="fa-solid fa-repeat control"></i>
+                </div>
+            </div>
+            <div id="pl-down">
+                <div id="time-played">2:14</div>
+                <div id="time-display">
+                    <div id="time-played-dis"></div>
+                </div>
+                <div id="time-left">3:46</div>
+            </div>
+        </div>
+
+        <div id="pl-other-opt">
+            <div id="details" class="opt-div">
+                <i class="fa-solid fa-bars opt-sign"></i>
+                <!-- <i class="fa-solid fa-computer-speaker opt-sign"></i> -->
+            </div>
+            <div id="system" class="opt-div">
+                <i class="fa-solid fa-computer opt-sign"></i>
+            </div>
+            <div id="volume" class="opt-div">
+                <i class="fa-solid fa-volume-high opt-sign"></i>
+            </div>
+            <div class="slidecontainer">
+                <input id="vol-ctr" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <div id="full-screen" class="opt-div">
+                <i class="fa-solid fa-up-right-and-down-left-from-center opt-sign"></i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
